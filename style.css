@@ -1,0 +1,92 @@
+:root{
+  --bg:#081432; /* dark blue */
+  --card:#0b1e3a;
+  --accent:#00b4ff;
+  --muted:#9fb6d6;
+  --danger:#ff6b6b;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #04102a);
+  color: #e6f0ff;
+  -webkit-font-smoothing:antialiased;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand .ghost{font-size:20px}
+.brand .title{font-size:18px;letter-spacing:0.8px}
+
+.badge{background:var(--accent);color:#012; padding:6px 10px;border-radius:8px;font-weight:600;font-size:12px}
+
+.container{
+  width:980px;
+  max-width:95%;
+  margin:24px auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:16px;
+  padding-bottom:60px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:16px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.col{flex:1;min-width:140px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input[type="time"], input[type="number"], input[type="file"]{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:var(--glass);
+  color:inherit;
+  outline:none;
+}
+
+.controls{margin-top:12px;display:flex;gap:10px}
+button{padding:10px 14px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
+button.primary{background:var(--accent);color:#012}
+button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+.warning{margin-top:10px;color:var(--muted);font-size:13px}
+
+.outputArea{
+  padding:12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  min-height:72px;
+  font-size:15px;
+}
+
+.photoPreview{
+  margin-top:10px;
+  height:90px;
+  width:90px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.02);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
