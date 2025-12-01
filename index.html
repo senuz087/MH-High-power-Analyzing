@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="si">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>👻MH HIGH POWER SIM👻</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="ghost">👻</span>
+      <span class="title">MH HIGH POWER SIM</span>
+      <span class="ghost">👻</span>
+    </div>
+    <div class="badge">Simulation • Educational only</div>
+  </header>
+
+  <main class="container">
+    <!-- Upload photo -->
+    <section class="card">
+      <h2>Profile photo (optional)</h2>
+      <input id="photoInput" type="file" accept="image/*" />
+      <div id="photoPreview" class="photoPreview">No photo</div>
+    </section>
+
+    <!-- Input previous highs -->
+    <section class="card">
+      <h2>Enter two recent high events (10x+)</h2>
+      <div class="row">
+        <div class="col">
+          <label>Time 1</label>
+          <input id="time1" type="time" />
+        </div>
+        <div class="col">
+          <label>Odd 1 (e.g. 12.5)</label>
+          <input id="odd1" type="number" step="0.01" min="10" placeholder="≥10.00" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>Time 2</label>
+          <input id="time2" type="time" />
+        </div>
+        <div class="col">
+          <label>Odd 2 (e.g. 18.2)</label>
+          <input id="odd2" type="number" step="0.01" min="10" placeholder="≥10.00" />
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="generateBtn" class="primary">Generate Analysis</button>
+        <button id="simulateManyBtn" class="secondary">Run Simulation (1000 rounds)</button>
+      </div>
+      <div id="warning" class="warning">
+        <strong>Important:</strong> This app only runs a randomized simulation for educational purposes. Not a real signal.
+      </div>
+    </section>
+
+    <!-- Output -->
+    <section class="card">
+      <h2>Generated Super Super (simulation-only)</h2>
+      <div id="outputArea" class="outputArea">No analysis yet. Click <em>Generate Analysis</em>.</div>
+    </section>
+
+    <!-- Small analytics -->
+    <section class="card">
+      <h2>Quick analytics (simulation)</h2>
+      <div id="analyticsArea">—</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>👻MH HIGH POWER SIM👻 — Simulation / educational only. No real predictions.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
